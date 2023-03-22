@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies alert popup - Easy Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showmodal()">
+    <div id="modalbox">
+        <img src="images/cookies.png" class="cookies">
+        <p>Kami menggunakan cookie untuk mengoptimalkan pengalaman dan konten pengguna.</p>
+        <button type="button" onclick="closeModal()">Accept</button>
+        <img src="images/close.png" class="close-icon" onclick="closeModal()">
+    </div>
+
+    <script>
+        let modalbox = document.getElementById("modalbox");
+        function showmodal(){
+            setTimeout(() => {
+                modalbox.style.display = "block"
+            }, 3000);
+        }
+        function closeModal(){
+            modalbox.style.display = "none"
+        }
+    </script>
+</body>
+</html>
